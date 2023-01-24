@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Music Player V2</title>
+
+</head>
+
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <div class="infor">
+                <img alt="music cover." class="music-cover">
+                <div class="name-music">Track Name</div>
+                <div class="name-artist">Track Artist</div>
+                <audio></audio>
+            </div>
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seekbar" onchange="seeker()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+
+            <div class="controller">
+                <button class="buttons random" onclick="random()">
+                    <i class="bi bi-shuffle"></i>
+                </button>
+                <button class="buttons prev" onclick="prev()">
+                    <i class="bi bi-caret-left-fill"></i>
+                </button>
+                <button class="buttons playpause" onclick="play_Pause()">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="buttons next" onclick="next()">
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+                <button class="buttons repeat" onclick="repeat()">
+                    <i class="bi bi-repeat"></i>
+                </button>
+            </div>
+
+
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
